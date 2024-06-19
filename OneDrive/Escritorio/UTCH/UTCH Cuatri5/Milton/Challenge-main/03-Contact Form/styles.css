@@ -1,0 +1,226 @@
+@import url("https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap");
+
+:root {
+  --white: hsl(0, 0%, 100%);
+  --green-200: hsl(147, 39%, 91%);
+  --green-600: hsl(169, 82%, 27%);
+  --green-hover: hsl(168, 72%, 21%);
+  --grey-500: hsl(186, 15%, 59%);
+  --red: hsl(0, 66%, 54%);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Karla", sans-serif;
+  background-color: var(--green-200);
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+}
+
+form {
+  background-color: var(--white);
+  padding: 2rem;
+  border-radius: 1.25rem;
+  width: 75vh;
+  color: var(--grey-900);
+}
+
+h1 {
+  color: var(--grey-900);
+  margin-bottom: 1rem;
+  font-size: 32px;
+}
+
+input[type="text"] {
+  width: 100%;
+  padding: 0 1rem;
+  border: none;
+  outline: 1px solid var(--grey-500);
+  border-radius: 10px;
+  color: var(--grey-900);
+  font-size: 16px;
+}
+
+input:focus {
+  outline: 1px solid var(--green-600);
+}
+
+.star {
+  color: var(--green-600);
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.name-surname {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 2fr;
+  column-gap: 1rem;
+  row-gap: 0.5rem;
+}
+
+.email {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 2fr;
+  row-gap: 0.5rem;
+  margin: 1.5rem 0 1.5rem 0;
+}
+
+.query-type {
+  margin: 0.6rem 0 1.5rem 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  column-gap: 1rem;
+}
+
+.general-enquiry,
+.support-request {
+  outline: 1px solid var(--grey-500);
+  display: flex;
+  align-items: center;
+  border-radius: 10px;
+  padding: 0.8rem 1.5rem;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  row-gap: 0.1rem;
+}
+
+.query-type input {
+  outline: none;
+  width: min-content;
+  margin-right: 1rem;
+  accent-color: var(--green-600);
+  background-color: var(--green-200);
+  opacity: 0.6;
+}
+
+.query-type input:before {
+  background-color: var(--green-600);
+}
+
+.message {
+  display: grid;
+  flex-direction: column;
+}
+
+.message textarea {
+  margin: 0.7rem 0 0.5rem 0;
+  border: none;
+  outline: 1px solid var(--grey-500);
+  border-radius: 10px;
+  padding: 0.8rem 1rem;
+  resize: none;
+  font-size: 16px;
+}
+
+.checkbox {
+  margin: 1.5rem 0 1.5rem 0;
+  accent-color: var(--green-600);
+}
+
+.checkbox input[type="checkbox"],
+.checkbox label,
+.checkbox .error {
+  margin-right: 1rem;
+  border: none;
+  outline: none;
+  vertical-align: middle;
+}
+
+.checkbox input[type="checkbox"]:checked {
+  background-color: var(--green-600);
+}
+
+button {
+  width: 100%;
+  color: var(--white);
+  background-color: var(--green-600);
+  padding: 1rem 2rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+button:hover {
+  background-color: var(--green-hover);
+}
+
+.error {
+  color: var(--red);
+  font-size: 0.875rem;
+  display: none;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  h1 {
+    font-size: 28px;
+  }
+
+  p,
+  button,
+  label {
+    font-size: 15px;
+  }
+
+  form {
+    width: 75%;
+  }
+}
+
+@media (max-width: 767px) {
+  h1 {
+    font-size: 24px;
+  }
+  p,
+  button,
+  label {
+    font-size: 14px;
+  }
+  form {
+    width: 90%;
+  }
+  button {
+    padding: 1rem;
+  }
+}
+@media (max-width: 480px) {
+  h1 {
+    font-size: 20px;
+  }
+  p,
+  button,
+  label {
+    font-size: 14px;
+  }
+  .general-enquiry,
+  .support-request {
+    font-size: 14px;
+    margin: 0.5rem 0 0 0;
+  }
+  .query-type input {
+    margin-right: 1.3rem;
+  }
+}
