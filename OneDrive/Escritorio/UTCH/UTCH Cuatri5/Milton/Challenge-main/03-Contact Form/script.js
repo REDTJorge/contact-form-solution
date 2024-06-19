@@ -69,9 +69,22 @@ document.addEventListener("DOMContentLoaded", function () {
                 "¡Formulario enviado con éxito!";
             document.getElementById("success-message").style.display = "block";
             form.reset();
+                        showToast('¡Formulario enviado con éxito!');
+
         }
        
     });
+      function showToast(message, duration = 3000) {
+        const toast = document.getElementById('toastMessage');
+        if (toast) {
+          toast.textContent = message;
+          toast.style.display = 'block';
+          setTimeout(() => {
+            toast.style.display = 'none';
+          }, duration);
+        }
+      }
+
 
     function validateEmail(email) {
         const pattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
