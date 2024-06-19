@@ -27,6 +27,19 @@ main {
   width: 100%;
   height: 100vh;
 }
+.toast {
+  position: fixed; /* Posición fija para que se mantenga en la misma posición al hacer scroll */
+  top: 20px; /* Distancia desde la parte superior */
+  left: 50%; /* Centrado horizontalmente */
+  transform: translateX(-50%); /* Centrado horizontal exacto */
+  background-color: rgba(0, 0, 0, 0.7); /* Color de fondo */
+  color: #fff; /* Color del texto */
+  padding: 15px 20px; /* Relleno interno */
+  border-radius: 10px; /* Borde redondeado */
+  display: none; /* Inicialmente oculto */
+  z-index: 9999; /* Índice z alto para estar por encima de otros elementos */
+}
+
 
 form {
   background-color: var(--white);
